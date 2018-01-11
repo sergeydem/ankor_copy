@@ -153,7 +153,7 @@
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
-          <div class="product-single__prices">    
+          <div class="product-single__prices">
             <span id="PriceA11y" class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
             <span id="ProductPrice" class="product-single__price" itemprop="price" content="{{ product.price | divided_by: 100.00 }}">
               {{ product.price | money }}

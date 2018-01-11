@@ -245,9 +245,9 @@
     "customer": {
       "account": "My Account",
       "log_out": "Log out",
-      "log_in": "Log in",
-      "create_account": "Create account",
-      "or": "or"
+      "log_in": "Вход",
+      "create_account": "Регистрация",
+      "or": "|"
     },
     "footer": {
       "blog_title": "Latest News",

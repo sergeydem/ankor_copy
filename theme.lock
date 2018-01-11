@@ -26,7 +26,7 @@ assets/respond-proxy.html:
 assets/theme.js:
   development: 2018-01-10T09:21:13+02:00   49e1eccf956c9915d595fe86e76a43a2
 assets/theme.scss.liquid:
-  development: 2018-01-10T09:21:13+02:00   c778c4cf3ce67c00a9dfa38ebe4f875b
+  development: 2018-01-11T14:00:27+02:00   e8f381f8b401ca57d74285458c68015f
 assets/timber.scss.liquid:
   development: 2018-01-10T09:21:13+02:00   5e0c4e3a7ef99f88e9dc15fcb954f5dc
 config/settings_data.json:
@@ -36,11 +36,11 @@ config/settings_schema.json:
 layout/password.liquid:
   development: 2018-01-10T09:21:14+02:00   3d2e48bdf438ea5bf937b45c735b8dc8
 layout/theme.liquid:
-  development: 2018-01-11T09:56:40+02:00   86489ed4a70712d59913804cce50e323
+  development: 2018-01-11T13:03:33+02:00   ad4aaed728f54159c44faaeebc62b3b7
 locales/de.json:
   development: 2018-01-10T09:21:14+02:00   33b491c4aaba082df97ebf3d352aaad3
 locales/en.json:
-  development: 2018-01-10T13:54:13+02:00   7acbeb40e6956ed47571cd052bb37182
+  development: 2018-01-11T12:25:07+02:00   26c2c5378b80cddb15e138c6a0b96d2c
 locales/es.json:
   development: 2018-01-10T09:21:14+02:00   cb89cd4ebf4cd8757639136ed9d596a9
 locales/fr.json:
@@ -80,7 +80,7 @@ sections/footer.liquid:
 sections/gallery.liquid:
   development: 2018-01-10T09:21:12+02:00   7f80796f0eb998f4a032a1ca450b1cf2
 sections/header.liquid:
-  development: 2018-01-10T13:18:44+02:00   c19bece3d96284616829030c4931941f
+  development: 2018-01-11T15:31:31+02:00   128769ac979d5866fdebd88aff56de78
 sections/list-collections-template.liquid:
   development: 2018-01-10T09:21:12+02:00   b218836835163883f8006e98f64831ca
 sections/map.liquid:
@@ -92,7 +92,7 @@ sections/password-content.liquid:
 sections/password-header.liquid:
   development: 2018-01-10T09:21:12+02:00   139dbe1b79b652043852cc73731d43e4
 sections/product-template.liquid:
-  development: 2018-01-10T09:21:12+02:00   e4d8327712027c5a77721c781a757b22
+  development: 2018-01-11T17:20:17+02:00   79c44ffbddb37360382b93a778120a46
 sections/rich-text.liquid:
   development: 2018-01-10T09:21:12+02:00   408f02185ca5329eb1a670cf19ea4089
 sections/slider.liquid:
@@ -115,6 +115,10 @@ snippets/featured-blog.liquid:
   development: 2018-01-10T09:21:14+02:00   e6bbd2c8902921c6ce79e37c8d0bdc90
 snippets/google-fonts.liquid:
   development: 2018-01-10T09:21:14+02:00   8e40cfa27425f9a5b955b747e1edee96
+snippets/icon-chevron-left.liquid:
+  development: 2018-01-11T17:10:56+02:00   6290d56c32e8ac47abe4a4f4d90ed032
+snippets/icon-chevron-right.liquid:
+  development: 2018-01-11T17:11:27+02:00   41842e53e7b826a0d260e2ccffbfdab1
 snippets/image-style.liquid:
   development: 2018-01-10T09:21:14+02:00   264848e1c5a44d2f3f3feeb6edb0901c
 snippets/mobile-nav-icons.liquid:

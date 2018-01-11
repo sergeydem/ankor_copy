@@ -65,6 +65,25 @@
                 {% if section.settings.announcement_link != blank %}
                   <a href="{{ section.settings.announcement_link }}">
                 {% endif %}
+
+                      <!--top menu-->
+
+                      <div class="wrap-top-menu">
+                          <div class="items-menu">
+                              <ul>
+                                  <li class="item"><a href="#">О Нас</a></li>
+                                  <li class="item"><a href="#">Доставка и Оплата</a></li>
+                                  <li class="item"><a href="#">Документы</a></li>
+                                  <li class="item"><a href="#">Фото работ</a></li>
+                                  <li class="item"><a href="#">Публикации</a></li>
+                                  <li class="item"><a href="#">Контакты</a></li>
+                                  <li class="item"><a href="#">Отзывы</a></li>
+                              </ul>
+                          </div>
+                      </div>
+
+                      <!--end top menu-->
+
                   {{ section.settings.header_text | escape }}
                 {% if section.settings.announcement_link != blank %}
                   </a>
@@ -194,6 +213,38 @@
             {% else %}
               </div>
             {% endif %}
+
+            <!--header: tel, search, callback, cart-->
+
+            <div class="wrap-tel">
+                <div class="icon">
+                    <i class="material-icons">&#xE0B0;</i>
+                </div>
+                <div class="tel">
+                    <p>+7(978)025-44-78</p>
+                    <p>+7(978)713-89-35</p>
+                </div>
+            </div>
+            <div class="wrap-callback">
+                <button>Обратный звонок</button>
+            </div>
+            <div class="wrap-search">
+                <input type="text" name="search" value="" placeholder="Поиск товара по каталогу" class="search-input">
+                <span class="btn-input">
+                     <a href="#"><i class="material-icons">&#xE8B6;</i></a>
+                </span>
+            </div>
+            <div class="wrap-cart">
+                <div class="cart-icon">
+                    <i class="material-icons">&#xE8CC;</i>
+                </div>
+                <div class="cart-text">
+                    <p>товаров, на 0.00 р.</p>
+                </div>
+            </div>
+
+            <!--END header: tel, search, callback, cart-->
+
             {% if section.settings.header_search_enable %}
                 <div class="header-bar__module header-bar__search">
                     {% include 'search-bar' with 'header' %}
