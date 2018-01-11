@@ -36,5 +36,9 @@
     "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.0",
     "gulp-yaml": "^1.0.1"
+  },
+  "dependencies": {
+    "gulp-shopify-upload": "^2.0.0",
+    "gulp-watch": "^5.0.0"
   }
 }
