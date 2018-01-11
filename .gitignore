@@ -2,3 +2,4 @@ theme.lock
 node_modules
 config.yml
 shopifyconfig.json
+.idea/
