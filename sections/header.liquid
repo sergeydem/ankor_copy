@@ -194,6 +194,11 @@
             {% else %}
               </div>
             {% endif %}
+            {% if section.settings.header_search_enable %}
+                <div class="header-bar__module header-bar__search">
+                    {% include 'search-bar' with 'header' %}
+                </div>
+            {% endif %}
           </div>
         </div>
         <div class="grid--full medium-down--hide">

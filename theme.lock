@@ -36,11 +36,11 @@ config/settings_schema.json:
 layout/password.liquid:
   development: 2018-01-10T09:21:14+02:00   3d2e48bdf438ea5bf937b45c735b8dc8
 layout/theme.liquid:
-  development: 2018-01-10T12:57:10+02:00   86489ed4a70712d59913804cce50e323
+  development: 2018-01-11T09:56:40+02:00   86489ed4a70712d59913804cce50e323
 locales/de.json:
   development: 2018-01-10T09:21:14+02:00   33b491c4aaba082df97ebf3d352aaad3
-locales/en.default.json:
-  development: 2018-01-10T09:21:14+02:00   7acbeb40e6956ed47571cd052bb37182
+locales/en.json:
+  development: 2018-01-10T13:54:13+02:00   7acbeb40e6956ed47571cd052bb37182
 locales/es.json:
   development: 2018-01-10T09:21:14+02:00   cb89cd4ebf4cd8757639136ed9d596a9
 locales/fr.json:
@@ -80,7 +80,7 @@ sections/footer.liquid:
 sections/gallery.liquid:
   development: 2018-01-10T09:21:12+02:00   7f80796f0eb998f4a032a1ca450b1cf2
 sections/header.liquid:
-  development: 2018-01-10T09:21:12+02:00   c1f52e22a5e4d1da35c00711aaeb4ef5
+  development: 2018-01-10T13:18:44+02:00   c19bece3d96284616829030c4931941f
 sections/list-collections-template.liquid:
   development: 2018-01-10T09:21:12+02:00   b218836835163883f8006e98f64831ca
 sections/map.liquid:
