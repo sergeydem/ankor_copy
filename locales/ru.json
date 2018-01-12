@@ -237,17 +237,17 @@
   },
   "layout": {
     "navigation": {
-      "menu": "Menu"
+      "menu": "Меню"
     },
     "cart": {
-      "title": "Cart"
+      "title": "Корзина"
     },
     "customer": {
-      "account": "My Account",
-      "log_out": "Log out",
-      "log_in": "Log in",
+      "account": "Мой аккаунт",
+      "log_out": "Выход",
+      "log_in": "Вход",
       "create_account": "Регистрация",
-      "or": "or"
+      "or": "или"
     },
     "footer": {
       "blog_title": "Latest News",
@@ -269,11 +269,11 @@
       "sale": "Sale",
       "unavailable": "Unavailable",
       "compare_at": "Compare at",
-      "quantity": "Quantity",
-      "add_to_cart": "Add to Cart",
+      "quantity": "Количество",
+      "add_to_cart": "Купить",
       "sale_price": "Sale price",
       "regular_price": "Regular price",
-      "description": "Description",
+      "description": "Описание",
       "full_details": "Full details"
     },
     "zoom": {

@@ -233,7 +233,7 @@ gulp.task('shopifywatch', function() {
 // Default gulp action when gulp is run
 gulp.task('default', gulp.series('shopifywatch'));
 //
-gulp.task('deploy', gulp.parallel('build', function() {
+gulp.task('deploy', function() {
     return gulp.src('./+(assets|layout|config|snippets|templates|locales)/**')
         .pipe(gulpShopify('e8245ce2b2b0d129b98650133a24bc9d', '156e623fbfb4dc7244a446af2ed99079', 'demyanenko.myshopify.com', '21663875114'));
-}));
+});
