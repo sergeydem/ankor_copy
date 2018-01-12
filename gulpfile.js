@@ -222,18 +222,45 @@
 // Gulp plugin setup
 var gulp = require('gulp');
 // Watches single files
+var sass = require('gulp-sass');
+sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch');
 var gulpShopify = require('gulp-shopify-upload');
+
+
+//style paths
+var sassFiles = './assets/*.scss',
+    cssDest = './assets/';
+
+gulp.task('styles', function(){
+   return gulp.src(sassFiles)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(cssDest));
+});
+
 
 gulp.task('shopifywatch', function() {
     return watch('./+(assets|layout|config|snippets|templates|locales)/**')
         .pipe(gulpShopify('e8245ce2b2b0d129b98650133a24bc9d', '156e623fbfb4dc7244a446af2ed99079', 'demyanenko.myshopify.com', '21663875114'));
 });
 
-// Default gulp action when gulp is run
-gulp.task('default', gulp.series('shopifywatch'));
 //
 gulp.task('deploy', function() {
     return gulp.src('./+(assets|layout|config|snippets|templates|locales)/**')
         .pipe(gulpShopify('e8245ce2b2b0d129b98650133a24bc9d', '156e623fbfb4dc7244a446af2ed99079', 'demyanenko.myshopify.com', '21663875114'));
 });
+
+
+gulp.task('watch',function() {
+    gulp.watch(sassFiles,gulp.parallel('styles'));
+});
+
+
+
+// Default gulp action when gulp is run
+gulp.task('default', gulp.parallel('watch' , 'shopifywatch' ));
+
+
+
+
+

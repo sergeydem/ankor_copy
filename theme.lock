@@ -23,10 +23,14 @@ assets/password-page-background.jpg:
   development: 2018-01-10T09:21:13+02:00   4d5821272f875e5c11dd3a8c8e1d6133
 assets/respond-proxy.html:
   development: 2018-01-10T09:21:13+02:00   75002d74a330bff6bf069284da503b4c
+assets/style.css:
+  development: 2018-01-12T11:56:26+02:00   f1455fc264ed029fe52be51e319c3bf5
+assets/style.scss:
+  development: 2018-01-12T11:56:26+02:00   8bb1e7984329c1c24f56db58f7839a97
 assets/theme.js:
   development: 2018-01-10T09:21:13+02:00   49e1eccf956c9915d595fe86e76a43a2
 assets/theme.scss.liquid:
-  development: 2018-01-11T14:00:27+02:00   e8f381f8b401ca57d74285458c68015f
+  development: 2018-01-12T11:39:37+02:00   9a302f6530e1cbb1de219d80f84281e8
 assets/timber.scss.liquid:
   development: 2018-01-10T09:21:13+02:00   5e0c4e3a7ef99f88e9dc15fcb954f5dc
 config/settings_data.json:
@@ -80,7 +84,7 @@ sections/footer.liquid:
 sections/gallery.liquid:
   development: 2018-01-10T09:21:12+02:00   7f80796f0eb998f4a032a1ca450b1cf2
 sections/header.liquid:
-  development: 2018-01-11T15:31:31+02:00   128769ac979d5866fdebd88aff56de78
+  development: 2018-01-12T15:25:50+02:00   128769ac979d5866fdebd88aff56de78
 sections/list-collections-template.liquid:
   development: 2018-01-10T09:21:12+02:00   b218836835163883f8006e98f64831ca
 sections/map.liquid:
@@ -92,7 +96,7 @@ sections/password-content.liquid:
 sections/password-header.liquid:
   development: 2018-01-10T09:21:12+02:00   139dbe1b79b652043852cc73731d43e4
 sections/product-template.liquid:
-  development: 2018-01-11T17:20:17+02:00   79c44ffbddb37360382b93a778120a46
+  development: 2018-01-12T14:02:40+02:00   96a0cb94dc531d1366297089a29fcc9a
 sections/rich-text.liquid:
   development: 2018-01-10T09:21:12+02:00   408f02185ca5329eb1a670cf19ea4089
 sections/slider.liquid:

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+body a:hover, body a:focus {
+  text-decoration: none; }
+
+.breadcrumb {
+  background-color: transparent; }
+
+/*карточка товара*/
+.title-product, .title-descr-product {
+  color: #D4D4D4;
+  font-weight: bold; }
+
+.wrap-tabs .nav-tabs .nav-item .nav-link.active {
+  background-color: #353d44;
+  color: #FFFFFF; }
+
+.grid .second-col, .grid .third-col {
+  padding-top: 45px; }
+
+.grid .third-col .wrap-advantage {
+  display: flex;
+  align-items: center;
+  background-color: #F9F9F7;
+  margin-bottom: 15px;
+  padding: 15px 0; }
+  .grid .third-col .wrap-advantage .icon {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center; }
+    .grid .third-col .wrap-advantage .icon i {
+      font-size: 50px;
+      color: #353d44;
+      font-weight: bold; }
+  .grid .third-col .wrap-advantage .text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 30px; }
+
+@media only screen and (min-width: 769px) {
+  .post-large--one-half {
+    width: 33.33%; } }

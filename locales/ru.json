@@ -270,7 +270,7 @@
       "unavailable": "Unavailable",
       "compare_at": "Compare at",
       "quantity": "Количество",
-      "add_to_cart": "Купить",
+      "add_to_cart": "В корзину",
       "sale_price": "Sale price",
       "regular_price": "Regular price",
       "description": "Описание",
@@ -279,7 +279,7 @@
     "zoom": {
       "next": "Next (Right arrow key)",
       "prev": "Previous (Left arrow key)",
-      "close": "Close (Esc)"
+      "close": "Закрыть"
     }
   },
   "map": {

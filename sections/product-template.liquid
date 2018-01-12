@@ -30,210 +30,290 @@
     {% include 'breadcrumb' %}
   </div>
 
-  <div class="product-single">
-    <div class="grid product-single__hero">
-      <div class="grid__item post-large--one-half">
+  <!-- Мои доработки -->
 
-        {% if section.settings.product_thumbnails_position == 'below' or product.images.size < 2 %}
+  <h1 itemprop="name" class="title-product">{{ product.title }}</h1>
 
-          <div class="product-single__photos">
-            {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+  <div class="wrap-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#desc" role="tab">Описание</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#param" role="tab">Характеристики</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#prod" role="tab">Рекомендуемые товары</a>
+    </li>
+  </ul>
+  </div>
 
-            {% for image in product.images %}
-              {% capture img_id %}ProductImage-{{ image.id }}{% endcapture %}
-              {% capture img_wrapper_id %}ProductImageWrapper-{{ image.id }}{% endcapture %}
-              {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-              {% include 'image-style' with image: image, small_style: false, width: 700, height: 1024, wrapper_id: img_wrapper_id, img_id: img_id %}
+  <div class="tab-content">
+    <div class="tab-pane active" id="desc" role="tabpanel">
+      <div class="product-single">
+        <div class="grid product-single__hero">
+          <div class="grid__item post-large--one-half">
 
-              <div id="{{ img_wrapper_id }}" class="product-single__image-wrapper supports-js{% unless featured_image == image %} hide{% endunless %}{% if section.settings.product_image_zoom_type == 'lightbox' %} zoom-lightbox{% endif %}" data-image-id="{{ image.id }}">
-                <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
-                  <img id="{{ img_id }}"
-                       class="product-single__image lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
-                       {% if featured_image == image %}src="{{ image | img_url: '300x300' }}"{% endif %}
-                       data-src="{{ img_url }}"
-                       data-widths="[180, 370, 540, 740, 900, 1080, 1296, 1512, 1728, 2048]"
-                       data-aspectratio="{{ image.aspect_ratio }}"
-                       data-sizes="auto"
-                       {% if section.settings.product_image_zoom_type == 'zoom-in' %} data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}"{% endif %}
-                       alt="{{ image.alt | escape }}">
+              {% if section.settings.product_thumbnails_position == 'below' or product.images.size < 2 %}
+
+                <div class="product-single__photos">
+                    {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+
+                    {% for image in product.images %}
+                        {% capture img_id %}ProductImage-{{ image.id }}{% endcapture %}
+                        {% capture img_wrapper_id %}ProductImageWrapper-{{ image.id }}{% endcapture %}
+                        {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                        {% include 'image-style' with image: image, small_style: false, width: 700, height: 1024, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                      <div id="{{ img_wrapper_id }}" class="product-single__image-wrapper supports-js{% unless featured_image == image %} hide{% endunless %}{% if section.settings.product_image_zoom_type == 'lightbox' %} zoom-lightbox{% endif %}" data-image-id="{{ image.id }}">
+                        <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+                          <img id="{{ img_id }}"
+                               class="product-single__image lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
+                               {% if featured_image == image %}src="{{ image | img_url: '300x300' }}"{% endif %}
+                               data-src="{{ img_url }}"
+                               data-widths="[180, 370, 540, 740, 900, 1080, 1296, 1512, 1728, 2048]"
+                               data-aspectratio="{{ image.aspect_ratio }}"
+                               data-sizes="auto"
+                                  {% if section.settings.product_image_zoom_type == 'zoom-in' %} data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}"{% endif %}
+                               alt="{{ image.alt | escape }}">
+                        </div>
+                      </div>
+                    {% endfor %}
+
+                  <noscript>
+                    <img src="{{ featured_image | img_url: '1024x1024', scale: 2 }}" alt="{{ featured_image.alt | escape }}">
+                  </noscript>
                 </div>
-              </div>
-            {% endfor %}
 
-            <noscript>
-              <img src="{{ featured_image | img_url: '1024x1024', scale: 2 }}" alt="{{ featured_image.alt | escape }}">
-            </noscript>
-          </div>
+                  {% if product.images.size > 1 %}
 
-          {% if product.images.size > 1 %}
+                    <ul class="product-single__thumbnails grid-uniform" id="ProductThumbs">
+                        {% for image in product.images %}
+                          <li class="grid__item wide--one-quarter large--one-third medium-down--one-third">
+                            <a data-image-id="{{ image.id }}" href="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail">
+                              <img src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
+                            </a>
+                          </li>
+                        {% endfor %}
+                    </ul>
 
-            <ul class="product-single__thumbnails grid-uniform" id="ProductThumbs">
-              {% for image in product.images %}
-                <li class="grid__item wide--one-quarter large--one-third medium-down--one-third">
-                  <a data-image-id="{{ image.id }}" href="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail">
-                    <img src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
+                  {% endif %}
 
-          {% endif %}
 
-        {% else %}
 
-          <div class="grid">
-
-            <div class="grid__item four-fifths product-single__photos" id="ProductPhoto">
-              {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
-
-              {% for image in product.images %}
-                {% capture img_id %}ProductImage-{{ image.id }}{% endcapture %}
-                {% capture img_wrapper_id %}ProductImageWrapper-{{ image.id }}{% endcapture %}
-                {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                {% include 'image-style' with image: image, small_style: false, width: 700, height: 1024, wrapper_id: img_wrapper_id, img_id: img_id %}
-
-                <div id="{{ img_wrapper_id }}" class="product-single__image-wrapper supports-js{% unless featured_image == image %} hide{% endunless %}{% if section.settings.product_image_zoom_type == 'lightbox' %} zoom-lightbox{% endif %}" data-image-id="{{ image.id }}">
-                  <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
-                    <img id="{{ img_id }}"
-                         class="product-single__image lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
-                         {% if featured_image == image %}src="{{ image | img_url: '300x300' }}"{% endif %}
-                         data-src="{{ img_url }}"
-                         data-widths="[180, 370, 540, 740, 900, 1080, 1296, 1512, 1728, 2048]"
-                         data-aspectratio="{{ image.aspect_ratio }}"
-                         data-sizes="auto"
-                         {% if section.settings.product_image_zoom_type == 'zoom-in' %} data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}"{% endif %}
-                         alt="{{ image.alt | escape }}">
-                  </div>
-                </div>
               {% else %}
-                <img src="{{ featured_image | img_url: '1024x1024', scale: 2 }}" alt="{{ featured_image.alt | escape }}">
-              {% endfor %}
 
-              <noscript>
-                <img src="{{ featured_image | img_url: '1024x1024', scale: 2 }}" alt="{{ featured_image.alt | escape }}">
-              </noscript>
-            </div>
 
-            <div class="grid__item one-fifth">
+                <div class="grid">
 
-              <ul class="grid product-single__thumbnails" id="ProductThumbs">
-                {% for image in product.images %}
-                  <li class="grid__item">
-                    <a data-image-id="{{ image.id }}" href="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail">
-                      <img src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
+                  <div class="grid__item four-fifths product-single__photos" id="ProductPhoto">
+                      {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
 
-            </div>
+                      {% for image in product.images %}
+                          {% capture img_id %}ProductImage-{{ image.id }}{% endcapture %}
+                          {% capture img_wrapper_id %}ProductImageWrapper-{{ image.id }}{% endcapture %}
+                          {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                          {% include 'image-style' with image: image, small_style: false, width: 700, height: 1024, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                        <div id="{{ img_wrapper_id }}" class="product-single__image-wrapper supports-js{% unless featured_image == image %} hide{% endunless %}{% if section.settings.product_image_zoom_type == 'lightbox' %} zoom-lightbox{% endif %}" data-image-id="{{ image.id }}">
+                          <div style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;">
+                            <img id="{{ img_id }}"
+                                 class="product-single__image lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
+                                 {% if featured_image == image %}src="{{ image | img_url: '300x300' }}"{% endif %}
+                                 data-src="{{ img_url }}"
+                                 data-widths="[180, 370, 540, 740, 900, 1080, 1296, 1512, 1728, 2048]"
+                                 data-aspectratio="{{ image.aspect_ratio }}"
+                                 data-sizes="auto"
+                                    {% if section.settings.product_image_zoom_type == 'zoom-in' %} data-zoom="{{ image | img_url: '1024x1024', scale: 2 }}"{% endif %}
+                                 alt="{{ image.alt | escape }}">
+                          </div>
+                        </div>
+                      {% else %}
+                        <img src="{{ featured_image | img_url: '1024x1024', scale: 2 }}" alt="{{ featured_image.alt | escape }}">
+                      {% endfor %}
+
+                    <noscript>
+                      <img src="{{ featured_image | img_url: '1024x1024', scale: 2 }}" alt="{{ featured_image.alt | escape }}">
+                    </noscript>
+                  </div>
+
+                  <div class="grid__item one-fifth">
+
+                    <ul class="grid product-single__thumbnails" id="ProductThumbs">
+                        {% for image in product.images %}
+                          <li class="grid__item">
+                            <a data-image-id="{{ image.id }}" href="{{ image.src | img_url: '1024x1024' }}" class="product-single__thumbnail">
+                              <img src="{{ image.src | img_url: 'grande' }}" alt="{{ image.alt | escape }}">
+                            </a>
+                          </li>
+                        {% endfor %}
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              {% endif %}
+
+              {% if section.settings.product_image_zoom_type == 'lightbox' %}
+                <ul class="gallery" class="hidden">
+                    {% for image in product.images %}
+                      <li data-image-id="{{ image.id }}" class="gallery__item" data-mfp-src="{{ image | img_url: '1024x1024', scale: 2 }}"></li>
+                    {% endfor %}
+                </ul>
+              {% endif %}
 
           </div>
+          <div class="grid__item post-large--one-half second-col">
+              {% if section.settings.product_vendor_enable %}
+                  <span>Производитель:</span>
+                <span class="h4" itemprop="brand">{{ product.vendor }}</span>
+              {% endif %}
 
-        {% endif %}
+            <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                {% assign variant = product.selected_or_first_available_variant %}
 
-        {% if section.settings.product_image_zoom_type == 'lightbox' %}
-        <ul class="gallery" class="hidden">
-          {% for image in product.images %}
-          <li data-image-id="{{ image.id }}" class="gallery__item" data-mfp-src="{{ image | img_url: '1024x1024', scale: 2 }}"></li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+              <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+              <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
-      </div>
-      <div class="grid__item post-large--one-half">
-        {% if section.settings.product_vendor_enable %}
-          <span class="h3" itemprop="brand">{{ product.vendor }}</span>
-        {% endif %}
-        <h1 itemprop="name">{{ product.title }}</h1>
-
-        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          {% assign variant = product.selected_or_first_available_variant %}
-
-          <meta itemprop="priceCurrency" content="{{ shop.currency }}">
-          <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
-
-          <div class="product-single__prices">
-            <span id="PriceA11y" class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-            <span id="ProductPrice" class="product-single__price" itemprop="price" content="{{ product.price | divided_by: 100.00 }}">
+              <div class="product-single__prices">
+                <span id="PriceA11y" class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                <span id="ProductPrice" class="product-single__price" itemprop="price" content="{{ product.price | divided_by: 100.00 }}">
               {{ product.price | money }}
             </span>
 
-            {% if product.compare_at_price > product.price %}
-              <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="false">{{ 'products.product.sale_price' | t }}</span>
-              <s id="ComparePrice" class="product-single__sale-price">
-                {{ product.compare_at_price_max | money }}
-              </s>
-            {% else %}
-              <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="true">{{ 'products.product.sale_price' | t }}</span>
-              <s id="ComparePrice" class="product-single__sale-price hide">
-                {{ product.compare_at_price_max | money }}
-              </s>
-            {% endif %}
-          </div>
+                  {% if product.compare_at_price > product.price %}
+                    <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="false">{{ 'products.product.sale_price' | t }}</span>
+                    <s id="ComparePrice" class="product-single__sale-price">
+                        {{ product.compare_at_price_max | money }}
+                    </s>
+                  {% else %}
+                    <span id="ComparePriceA11y" class="visually-hidden" aria-hidden="true">{{ 'products.product.sale_price' | t }}</span>
+                    <s id="ComparePrice" class="product-single__sale-price hide">
+                        {{ product.compare_at_price_max | money }}
+                    </s>
+                  {% endif %}
+              </div>
 
-          <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
-            <select name="id" id="ProductSelect-{{ section.id }}" class="product-single__variants">
-              {% for variant in product.variants %}
-                {% if variant.available %}
+              <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
+                <select name="id" id="ProductSelect-{{ section.id }}" class="product-single__variants">
+                    {% for variant in product.variants %}
+                        {% if variant.available %}
 
-                  <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money_with_currency }}</option>
 
-                {% else %}
-                  <option disabled="disabled">
-                    {{ variant.title }} - {{ 'products.product.sold_out' | t }}
-                  </option>
+                        {% else %}
+                          <option disabled="disabled">
+                              {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+                          </option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+
+                <div class="product-single__quantity{% unless section.settings.product_quantity_enable %} is-hidden{% endunless %}">
+                  <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+                  <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
+                </div>
+
+                <button type="submit" name="add" id="AddToCart" class="{{ btn_class }}">
+                  <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
+                </button>
+                <button type="submit" name="add" id="AddToCart" class="{{ btn_class }}">
+                  <span id="AddToCartText">Быстрый заказ</span>
+                </button>
+              </form>
+
+
+
+                {% if section.settings.social_sharing %}
+                  <hr class="hr--clear hr--small">
+                  <h2 class="h4">{{ 'products.general.share_title' | t }}</h2>
+                    {% include 'social-sharing' %}
                 {% endif %}
-              {% endfor %}
-            </select>
-
-            <div class="product-single__quantity{% unless section.settings.product_quantity_enable %} is-hidden{% endunless %}">
-              <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-              <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
             </div>
 
-            <button type="submit" name="add" id="AddToCart" class="{{ btn_class }}">
-              <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
-            </button>
-          </form>
-
-          {% unless section.settings.show_extra_tab == false or pages[section.settings.extra_tab_content] == empty %}
-            <div class="tabs">
-              <ul class="tab-switch__nav">
-                <li>
-                  <a href="#description" data-link="description" class="tab-switch__trigger h3">{{ 'products.product.description' | t }}</a>
-                </li>
-                <li>
-                  <a href="#extra" data-link="extra" class="tab-switch__trigger h3">{{ pages[section.settings.extra_tab_content].title }}</a>
-                </li>
-              </ul>
-              <div id="description" class="tab-switch__content" data-content="description">
-                <div class="product-description rte" itemprop="description">
-                  {{ product.description }}
-                </div>
+          </div>
+          <div class="grid__item post-large--one-half third-col">
+              <div class="wrap-advantage">
+                <div class="icon"><i class="material-icons">&#xE876;</i></div>
+                <div class="text">Раскрой материала в размер</div>
               </div>
-              <div id="extra" class="tab-switch__content" data-content="extra">
-                <div class="rte">
-                  {{ pages[section.settings.extra_tab_content].content }}
-                </div>
-              </div>
+            <div class="wrap-advantage">
+              <div class="icon"><i class="material-icons">&#xE876;</i></div>
+              <div class="text">Консультации по подбору комплектующих</div>
             </div>
-          {% else %}
-            <div class="product-description rte" itemprop="description">
-              {{ product.description }}
+            <div class="wrap-advantage">
+              <div class="icon"><i class="material-icons">&#xE876;</i></div>
+              <div class="text">Срок службы 25 лет</div>
             </div>
-          {% endunless %}
-
-          {% if section.settings.social_sharing %}
-            <hr class="hr--clear hr--small">
-            <h2 class="h4">{{ 'products.general.share_title' | t }}</h2>
-            {% include 'social-sharing' %}
-          {% endif %}
+          </div>
         </div>
-
       </div>
+      <hr>
+      <h2 class="title-descr-product">Описание</h2>
+        {% unless section.settings.show_extra_tab == false or pages[section.settings.extra_tab_content] == empty %}
+      <div class="tabs">
+        <ul class="tab-switch__nav">
+          <li>
+            <a href="#description" data-link="description" class="tab-switch__trigger h3">{{ 'products.product.description' | t }}</a>
+          </li>
+          <li>
+            <a href="#extra" data-link="extra" class="tab-switch__trigger h3">{{ pages[section.settings.extra_tab_content].title }}</a>
+          </li>
+        </ul>
+        <div id="description" class="tab-switch__content" data-content="description">
+          <div class="product-description rte" itemprop="description">
+              {{ product.description }}
+          </div>
+        </div>
+        <div id="extra" class="tab-switch__content" data-content="extra">
+          <div class="rte">
+              {{ pages[section.settings.extra_tab_content].content }}
+          </div>
+        </div>
+      </div>
+        {% else %}
+      <div class="product-description rte" itemprop="description">
+          {{ product.description }}
+      </div>
+        {% endunless %}
     </div>
-  </div>
+    <div class="tab-pane" id="param" role="tabpanel">
+      <h3>Заголовок</h3>
+      <ul>
+        <li>Характеристика 1</li>
+        <li>Характеристика 2</li>
+        <li>Характеристика 3</li>
+        <li>Характеристика 4</li>
+        <li>Характеристика 5</li>
+        <li>Характеристика 6</li>
+        <li>Характеристика 7</li>
+        <li>Характеристика 8</li>
+        <li>Характеристика 9</li>
+        <li>Характеристика 10</li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="prod" role="tabpanel">
+      <h3>Заголовок</h3>
+      <ul>
+        <li>Товар 1</li>
+        <li>Товар 2</li>
+        <li>Товар 3</li>
+        <li>Товар 4</li>
+        <li>Товар 3</li>
+        <li>Товар 4</li>
+        <li>Товар 3</li>
+        <li>Товар 4</li>
+      </ul>
+    </div>
+    </div>
+
+    </div>
+
+
+  <!-- Конец Моих доработок -->
+
+
 
   {% if section.settings.product_related_enable %}
     {% include 'related-products' %}
