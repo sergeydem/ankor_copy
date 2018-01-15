@@ -73,23 +73,23 @@
   },
   "cart": {
     "general": {
-      "title": "Your Cart",
-      "remove": "Remove",
+      "title": "Ваша корзина",
+      "remove": "Удалить",
       "note": "Special instructions for seller",
-      "subtotal": "Subtotal",
+      "subtotal": "Общая стоимость",
       "savings_html": "You're saving {{ price }}",
-      "shipping_at_checkout": "Shipping, taxes, and discounts will be calculated at checkout.",
-      "update": "Update Cart",
-      "checkout": "Check Out",
+      "shipping_at_checkout": "Доставка, налоги и скидки будут рассчитываться при оформлении заказа.",
+      "update": "Обновить корзину",
+      "checkout": "Оформить",
       "empty": "Your cart is currently empty.",
       "cookies_required": "Enable cookies to use the shopping cart",
       "continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
-      "continue_shopping": "Continue shopping"
+      "continue_shopping": "Продолжить покупки"
     },
     "label": {
-      "price": "Price",
-      "quantity": "Quantity",
-      "total": "Total",
+      "price": "Цена",
+      "quantity": "Количество",
+      "total": "Итого",
       "add_note": "Add a note to your order"
     }
   },
@@ -198,7 +198,7 @@
       "quantity": "Quantity",
       "total": "Total",
       "fulfilled_at": "Fulfilled {{ date }}",
-      "subtotal": "Subtotal",
+      "subtotal": "Общая стоимость",
       "track_shipment": "Track shipment"
     },
     "recover_password": {
