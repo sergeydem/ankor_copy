@@ -181,6 +181,9 @@ body {
 .title-product, .title-descr-product {
   color: #D4D4D4;
   font-weight: bold;
+  @include media-breakpoint-down(sm){
+    font-size: 25px;
+  }
 }
 .wrap-tabs {
   .nav-tabs {
@@ -202,6 +205,13 @@ body {
 .grid {
   .second-col, .third-col {
     padding-top: 45px;
+  }
+  .second-col {
+    #AddToCartForm {
+      .btn {
+        margin-bottom: 5px;
+      }
+    }
   }
   .third-col {
     .wrap-advantage {
@@ -233,7 +243,12 @@ body {
 
 
 @media only screen and (min-width: 769px) {
-  .post-large--one-half {
-    width: 33.33%;
+  .product-single {
+    .product-single__hero {
+      .post-large--one-half {
+        width: 33.33%;
+      }
+    }
   }
+
 }

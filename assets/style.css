@@ -130,6 +130,9 @@ body textarea {
 .title-product, .title-descr-product {
   color: #D4D4D4;
   font-weight: bold; }
+  @media (max-width: 767.98px) {
+    .title-product, .title-descr-product {
+      font-size: 25px; } }
 
 @media (max-width: 767.98px) {
   .wrap-tabs .nav-tabs {
@@ -144,6 +147,9 @@ body textarea {
 
 .grid .second-col, .grid .third-col {
   padding-top: 45px; }
+
+.grid .second-col #AddToCartForm .btn {
+  margin-bottom: 5px; }
 
 .grid .third-col .wrap-advantage {
   display: flex;
@@ -167,5 +173,5 @@ body textarea {
     line-height: 30px; }
 
 @media only screen and (min-width: 769px) {
-  .post-large--one-half {
+  .product-single .product-single__hero .post-large--one-half {
     width: 33.33%; } }
