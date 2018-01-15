@@ -1,8 +1,177 @@
+@import "_breakpoints.scss";
+@import "_functions.scss";
+@import "_variables.scss";
+
+
 body {
-  a:hover, a:focus {
+  a:hover, a:focus , a:active{
     text-decoration: none;
+    outline: none;
+  }
+
+  input, textarea {outline:none;}
+  input:active, textarea:active {outline:none;}
+  :focus {outline:none;}
+  textarea {resize:none;}
+  textarea {resize:vertical;}
+  textarea {resize:horizontal;}
+}
+
+
+/*----------------------MY CUSTOM STYLES----------------------------*/
+
+/*top menu*/
+
+.wrap-top-menu {
+  .items-menu {
+    ul {
+      margin: 0;
+      .item {
+        display: inline;
+        padding-right: 7px;
+      }
+    }
   }
 }
+
+/*END top menu*/
+
+/*header*/
+.site-header {
+  .wrapper {
+    .grid--full {
+      .grid__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(sm){
+          flex-direction: column;
+        }
+
+        nav {
+          width: 100%;
+          .site-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            background-color: #8f8f8f;
+            li {
+              a {
+                background-color: transparent;
+                color: #FFFFFF;
+                @include media-breakpoint-down(lg) {
+                  padding: 7px 7px 7px 7px;
+                }
+
+                &:hover {
+                  color: #000000;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+
+        .site-header__logo {
+          width: 70%;
+          .logo__image-wrapper {
+            @include media-breakpoint-down(sm) {
+              margin: 0 auto;
+            }
+          }
+        }
+
+        .wrap-tel {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          .icon {
+            background-color: #1bbc9b;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            i {
+              color: #ffffff;
+              font-size: 20px;
+            }
+          }
+          .tel {
+            p {
+              margin: 15px 0 15px 0;
+              font-size: 18px;
+              letter-spacing: 2px;
+              @include media-breakpoint-between(sm, lg) {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+
+        .wrap-callback {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          button {
+            background-color: #1bbc9b;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: #FFFFFF;
+          }
+        }
+
+        .wrap-search {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          .search-input {
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            width: 290px;
+            position: relative;
+          }
+          .btn-input {
+            //position: absolute;
+            //right: 7px;
+            position: relative;
+            margin-left: -30px;
+            & a {
+              display: flex;
+              align-items: center;
+              i {
+                color: #000000
+              }
+            }
+          }
+        }
+
+        .wrap-cart {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 80%;
+          .header-bar__module {
+            .cart-page-link {
+              .header-bar__cart-icon {
+                font-size: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*END header*/
 
 .breadcrumb {
   background-color: transparent;
@@ -15,6 +184,9 @@ body {
 }
 .wrap-tabs {
   .nav-tabs {
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
     .nav-item {
       .nav-link.active {
         background-color: #353d44;
@@ -22,6 +194,9 @@ body {
       }
     }
   }
+}
+.tab-content {
+  min-height: 40vh;
 }
 
 .grid {

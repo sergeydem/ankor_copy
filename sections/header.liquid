@@ -121,27 +121,20 @@
             </ul>
           {% endif %}
 
-          <div class="header-bar__module">
+          <div class="header-bar__module hidden-md-up">
             <span class="header-bar__sep" aria-hidden="true"></span>
             <a href="/cart" class="cart-page-link">
               <span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span>
             </a>
           </div>
 
-          <div class="header-bar__module">
+          <div class="header-bar__module hidden-md-up">
             <a href="/cart" class="cart-page-link">
               {{ 'layout.cart.title' | t }}{% unless cart.item_count == 0 %}:{% endunless %}
               <span class="cart-count header-bar__cart-count{% if cart.item_count == 0 %} hidden-count{% endif %}">{{ cart.item_count }}</span>
             </a>
           </div>
 
-          {% if section.settings.header_search_enable %}
-            {% if section.settings.show_announcement %}
-              <div class="header-bar__module header-bar__search">
-                {% include 'search-bar' with 'header' %}
-              </div>
-            {% endif %}
-          {% endif %}
 
         </div>
       </div>
@@ -225,31 +218,42 @@
                     <p>+7(978)713-89-35</p>
                 </div>
             </div>
-            <div class="wrap-callback">
+            <div class="wrap-callback hidden-md-down">
                 <button>Обратный звонок</button>
             </div>
             <div class="wrap-search">
+                <!--
                 <input type="text" name="search" value="" placeholder="Поиск товара по каталогу" class="search-input">
                 <span class="btn-input">
                      <a href="#"><i class="material-icons">&#xE8B6;</i></a>
                 </span>
+                -->
+                {% if section.settings.header_search_enable %}
+                    {% if section.settings.show_announcement %}
+                        <div class="header-bar__module header-bar__search">
+                            {% include 'search-bar' with 'header' %}
+                        </div>
+                    {% endif %}
+                {% endif %}
             </div>
-            <div class="wrap-cart">
-                <div class="cart-icon">
-                    <i class="material-icons">&#xE8CC;</i>
+            <div class="wrap-cart hidden-md-down">
+                <div class="header-bar__module">
+                    <span class="header-bar__sep" aria-hidden="true"></span>
+                    <a href="/cart" class="cart-page-link">
+                        <span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span>
+                    </a>
                 </div>
-                <div class="cart-text">
-                    <p>товаров, на 0.00 р.</p>
+
+                <div class="header-bar__module">
+                    <a href="/cart" class="cart-page-link">
+                        {{ 'layout.cart.title' | t }}{% unless cart.item_count == 0 %}:{% endunless %}
+                        <span class="cart-count header-bar__cart-count{% if cart.item_count == 0 %} hidden-count{% endif %}">{{ cart.item_count }}</span>
+                    </a>
                 </div>
             </div>
 
             <!--END header: tel, search, callback, cart-->
 
-            {% if section.settings.header_search_enable %}
-                <div class="header-bar__module header-bar__search">
-                    {% include 'search-bar' with 'header' %}
-                </div>
-            {% endif %}
           </div>
         </div>
         <div class="grid--full medium-down--hide">

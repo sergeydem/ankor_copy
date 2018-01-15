@@ -57,6 +57,8 @@ locales/pt-BR.json:
   development: 2018-01-10T09:21:14+02:00   d8e6f309a0c029161bdbfeede9170413
 locales/pt-PT.json:
   development: 2018-01-10T09:21:14+02:00   3c235f1ac12904379bb046ded4944c21
+locales/ru.json:
+  development: 2018-01-15T11:57:46+02:00   fdcba34dfd0bfeb0319057d0efd5e2a5
 sections/article-template.liquid:
   development: 2018-01-10T09:21:11+02:00   f1dd5566ff0988ce2f9ff22cee0c6d61
 sections/blog-template.liquid:
@@ -84,7 +86,7 @@ sections/footer.liquid:
 sections/gallery.liquid:
   development: 2018-01-10T09:21:12+02:00   7f80796f0eb998f4a032a1ca450b1cf2
 sections/header.liquid:
-  development: 2018-01-12T15:25:50+02:00   128769ac979d5866fdebd88aff56de78
+  development: 2018-01-15T12:57:45+02:00   ebbe5f6369ad7d34318e6b3185669d4d
 sections/list-collections-template.liquid:
   development: 2018-01-10T09:21:12+02:00   b218836835163883f8006e98f64831ca
 sections/map.liquid:
@@ -144,7 +146,7 @@ snippets/related-products.liquid:
 snippets/respond.liquid:
   development: 2018-01-10T09:21:14+02:00   296108cb94e6cb82d515ebb93308ef68
 snippets/search-bar.liquid:
-  development: 2018-01-10T09:21:14+02:00   153f168e799a75157665c273aaee23ea
+  development: 2018-01-15T12:24:37+02:00   13718b56cde56faaf313e885a89c9f65
 snippets/search-result-grid.liquid:
   development: 2018-01-10T09:21:14+02:00   557927664b63a565d872e261393e3eea
 snippets/search-result.liquid:

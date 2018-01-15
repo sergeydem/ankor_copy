@@ -33,8 +33,8 @@
       "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
       "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
       "title": "Search for products on our site",
-      "placeholder": "Search",
-      "submit": "Search"
+      "placeholder": "Поиск",
+      "submit": "Поиск"
     },
     "social": {
       "share_on_facebook": "Share",
@@ -100,7 +100,7 @@
       "link_title": "Browse our {{ title }} collection"
     },
     "sorting": {
-      "title": "Sort by",
+      "title": "Сортировать по",
       "browse": "Browse by",
       "all_tags": "All",
       "featured": "Featured",
@@ -247,7 +247,7 @@
       "log_out": "Выход",
       "log_in": "Вход",
       "create_account": "Регистрация",
-      "or": "или"
+      "or": "|"
     },
     "footer": {
       "blog_title": "Latest News",
@@ -260,7 +260,7 @@
   },
   "products": {
     "general": {
-      "from_html": "From {{ price }}",
+      "from_html": "От {{ price }}",
       "share_title": "Share this Product",
       "related_products_title": "More from this collection"
     },
