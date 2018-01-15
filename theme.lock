@@ -33,6 +33,8 @@ assets/theme.scss.liquid:
   development: 2018-01-12T11:39:37+02:00   9a302f6530e1cbb1de219d80f84281e8
 assets/timber.scss.liquid:
   development: 2018-01-10T09:21:13+02:00   5e0c4e3a7ef99f88e9dc15fcb954f5dc
+assets/wedoLogo.png:
+  development: 2018-01-15T15:32:14+02:00   ebc6a294c718bbade02a89b387c09ce4
 config/settings_data.json:
   development: 2018-01-10T10:11:32+02:00   422185ed769409815e892855f5f15659
 config/settings_schema.json:
@@ -66,9 +68,9 @@ sections/blog-template.liquid:
 sections/cart-template.liquid:
   development: 2018-01-10T09:21:11+02:00   3e6215f7ee6d5c132b19528dde894db1
 sections/collection-list.liquid:
-  development: 2018-01-10T09:21:11+02:00   5ce167a04cb4d3216afbe926670ff26b
+  development: 2018-01-15T15:30:15+02:00   75f572a10ba775e58ade2c6621dca844
 sections/collection-template.liquid:
-  development: 2018-01-10T09:21:11+02:00   793cf91cb9827febf7ae64f907034ecd
+  development: 2018-01-15T15:29:26+02:00   09161a4f058a2c12aeafa1ccbc25cf38
 sections/custom-html.liquid:
   development: 2018-01-10T09:21:11+02:00   927c0e19d490d39ff4aa5bb9204175c7
 sections/feature-row.liquid:
@@ -82,7 +84,7 @@ sections/featured-product.liquid:
 sections/featured-video.liquid:
   development: 2018-01-10T09:21:12+02:00   8125f658ad90f103df0dd67bed3dff24
 sections/footer.liquid:
-  development: 2018-01-10T09:21:12+02:00   046c739550818045710df5b289290303
+  development: 2018-01-15T15:33:25+02:00   9874c787f6cee6ad7ae40d6722327cf2
 sections/gallery.liquid:
   development: 2018-01-10T09:21:12+02:00   7f80796f0eb998f4a032a1ca450b1cf2
 sections/header.liquid:

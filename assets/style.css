@@ -175,3 +175,9 @@ body textarea {
 @media only screen and (min-width: 769px) {
   .product-single .product-single__hero .post-large--one-half {
     width: 33.33%; } }
+
+/*-------FOOTER-------------*/
+.site-footer .grid__item .wedo {
+  color: #FFFFFF; }
+
+/*-------END FOOTER-------------*/
