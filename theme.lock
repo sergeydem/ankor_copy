@@ -130,7 +130,7 @@ snippets/image-style.liquid:
 snippets/mobile-nav-icons.liquid:
   development: 2018-01-10T09:21:14+02:00   47770a15391de08bb1523ad7cb8df819
 snippets/mobile-nav.liquid:
-  development: 2018-01-10T09:21:14+02:00   c092b84e04baf230097ad39a5ba33654
+  development: 2018-01-15T14:08:02+02:00   d22d9e2759a20374e68847f7ec09b34a
 snippets/newsletter-form.liquid:
   development: 2018-01-10T09:21:14+02:00   4e93b8617cdaba1a329a9e00618008b6
 snippets/oldIE-js.liquid:
