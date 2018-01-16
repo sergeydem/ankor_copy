@@ -218,6 +218,9 @@ body textarea {
   #team_wrap .driver {
     float: right;
     padding-right: 15px; }
+    @media (max-width: 575.98px) {
+      #team_wrap .driver {
+        float: none; } }
     #team_wrap .driver .person_icon img {
       width: 65px;
       height: 62px; }
@@ -238,8 +241,17 @@ body textarea {
     width: 100%;
     min-height: 75px;
     padding: 16px 0; }
+    @media (max-width: 575.98px) {
+      #team_wrap .team_call {
+        flex-direction: column; } }
     #team_wrap .team_call .team_call_text {
       font-size: 16px; }
+      @media (max-width: 575.98px) {
+        #team_wrap .team_call .team_call_text {
+          text-align: center; } }
+    @media (max-width: 575.98px) {
+      #team_wrap .team_call .team_call_btn {
+        text-align: center; } }
   #team_wrap .line {
     width: 100%;
     height: 1px;

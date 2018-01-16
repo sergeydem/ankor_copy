@@ -301,6 +301,9 @@ body {
   .driver {
     float: right;
     padding-right: 15px;
+    @include media-breakpoint-down(xs){
+      float: none;
+    }
     .person_icon {
       img {
         width: 65px;
@@ -331,8 +334,19 @@ body {
     width: 100%;
     min-height: 75px;
     padding: 16px 0;
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+    }
     .team_call_text {
       font-size: 16px;
+      @include media-breakpoint-down(xs) {
+        text-align: center;
+      }
+    }
+    .team_call_btn {
+      @include media-breakpoint-down(xs) {
+        text-align: center;
+      }
     }
   }
   .line {
