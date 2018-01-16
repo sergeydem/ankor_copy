@@ -53,7 +53,7 @@
       "newer_post": "Newer Post",
       "tags": "Tags",
       "comment_meta_html": "{{ author }} on {{ date }}",
-      "view_all": "View all",
+      "view_all": "Все объекты",
       "read_more": "Read more"
     },
     "comments": {
