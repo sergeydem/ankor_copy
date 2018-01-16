@@ -252,6 +252,38 @@ body {
   }
 }
 
+/*----------Каталог----------*/
+
+/*Пагинация*/
+.pagination-custom {
+  li {
+    span {
+      background-color: #353d44;
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    a {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  li:first-child, li:last-child {
+    span {
+      background-color: transparent;
+    }
+  }
+}
+/*--Пагинация*/
+
+/*----------END Каталог----------*/
+
 
 /*-------FOOTER-------------*/
 .site-footer {

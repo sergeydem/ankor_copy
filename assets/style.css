@@ -176,6 +176,29 @@ body textarea {
   .product-single .product-single__hero .post-large--one-half {
     width: 33.33%; } }
 
+/*----------Каталог----------*/
+/*Пагинация*/
+.pagination-custom li span {
+  background-color: #353d44;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.pagination-custom li a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.pagination-custom li:first-child span, .pagination-custom li:last-child span {
+  background-color: transparent; }
+
+/*--Пагинация*/
+/*----------END Каталог----------*/
 /*-------FOOTER-------------*/
 .site-footer .grid__item .wedo {
   color: #FFFFFF; }
