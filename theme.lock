@@ -114,7 +114,7 @@ snippets/breadcrumb.liquid:
 snippets/collection-grid-item.liquid:
   development: 2018-01-10T09:21:14+02:00   db7580d38bac3c09881c71dac5b5fea1
 snippets/collection-sorting.liquid:
-  development: 2018-01-10T09:21:14+02:00   3d2648af8d497870a7036250f62a7823
+  development: 2018-01-16T11:25:07+02:00   e9bd1364a1be6247dfc7f6a2363e8843
 snippets/collection-tags.liquid:
   development: 2018-01-10T09:21:14+02:00   46029eea21893fe5add28a5547b3d35b
 snippets/comment.liquid:

@@ -103,14 +103,14 @@
       "title": "Сортировать по",
       "browse": "Browse by",
       "all_tags": "All",
-      "featured": "Featured",
-      "best_selling": "Best Selling",
-      "az": "Alphabetically, A-Z",
-      "za": "Alphabetically, Z-A",
-      "price_ascending": "Price, low to high",
-      "price_descending": "Price, high to low",
-      "date_descending": "Date, new to old",
-      "date_ascending": "Date, old to new"
+      "featured": "По умолчанию",
+      "best_selling": "Наиболее популярные",
+      "az": "По имени (А-Я)",
+      "za": "По имени (Я-А)",
+      "price_ascending": "По цене (возростанию)",
+      "price_descending": "По цене (убыванию)",
+      "date_descending": "По дате (убыванию)",
+      "date_ascending": "По дате (возрастанию)"
     }
   },
   "contact": {
