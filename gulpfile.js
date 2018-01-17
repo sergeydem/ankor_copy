@@ -241,13 +241,13 @@ gulp.task('styles', function(){
 
 gulp.task('shopifywatch', function() {
     return watch('./+(assets|layout|config|snippets|templates|locales)/**')
-        .pipe(gulpShopify('e8245ce2b2b0d129b98650133a24bc9d', '156e623fbfb4dc7244a446af2ed99079', 'demyanenko.myshopify.com', '21663875114'));
+        .pipe(gulpShopify('c4b35b5425a548add32c8590f99bb2b2', '8e5b27d702d7c62a8bef852870ea1306', 'wedotest.myshopify.com', '25566674987'));
 });
 
 //
 gulp.task('deploy', function() {
     return gulp.src('./+(assets|layout|config|snippets|templates|locales)/**')
-        .pipe(gulpShopify('e8245ce2b2b0d129b98650133a24bc9d', '156e623fbfb4dc7244a446af2ed99079', 'demyanenko.myshopify.com', '21663875114'));
+        .pipe(gulpShopify('c4b35b5425a548add32c8590f99bb2b2', '8e5b27d702d7c62a8bef852870ea1306', 'wedotest.myshopify.com', '25566674987'));
 });
 
 
