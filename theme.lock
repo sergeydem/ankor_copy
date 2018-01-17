@@ -28,7 +28,7 @@ assets/style.css:
 assets/style.scss:
   development: 2018-01-12T11:56:26+02:00   8bb1e7984329c1c24f56db58f7839a97
 assets/theme.js:
-  development: 2018-01-10T09:21:13+02:00   49e1eccf956c9915d595fe86e76a43a2
+  development: 2018-01-16T10:24:14+02:00   9ba51e83f86892cb98b53716d1b2d802
 assets/theme.scss.liquid:
   development: 2018-01-12T11:39:37+02:00   9a302f6530e1cbb1de219d80f84281e8
 assets/timber.scss.liquid:
@@ -68,9 +68,9 @@ sections/blog-template.liquid:
 sections/cart-template.liquid:
   development: 2018-01-10T09:21:11+02:00   3e6215f7ee6d5c132b19528dde894db1
 sections/collection-list.liquid:
-  development: 2018-01-15T15:30:15+02:00   75f572a10ba775e58ade2c6621dca844
+  development: 2018-01-16T09:43:58+02:00   5ce167a04cb4d3216afbe926670ff26b
 sections/collection-template.liquid:
-  development: 2018-01-15T15:29:26+02:00   09161a4f058a2c12aeafa1ccbc25cf38
+  development: 2018-01-16T09:45:43+02:00   793cf91cb9827febf7ae64f907034ecd
 sections/custom-html.liquid:
   development: 2018-01-10T09:21:11+02:00   927c0e19d490d39ff4aa5bb9204175c7
 sections/feature-row.liquid:
@@ -100,7 +100,7 @@ sections/password-content.liquid:
 sections/password-header.liquid:
   development: 2018-01-10T09:21:12+02:00   139dbe1b79b652043852cc73731d43e4
 sections/product-template.liquid:
-  development: 2018-01-15T15:06:52+02:00   0c9749a544d479f45bcddaf3c61271d1
+  development: 2018-01-16T10:20:28+02:00   0c9749a544d479f45bcddaf3c61271d1
 sections/rich-text.liquid:
   development: 2018-01-10T09:21:12+02:00   408f02185ca5329eb1a670cf19ea4089
 sections/slider.liquid:
@@ -114,7 +114,7 @@ snippets/breadcrumb.liquid:
 snippets/collection-grid-item.liquid:
   development: 2018-01-10T09:21:14+02:00   db7580d38bac3c09881c71dac5b5fea1
 snippets/collection-sorting.liquid:
-  development: 2018-01-10T09:21:14+02:00   3d2648af8d497870a7036250f62a7823
+  development: 2018-01-16T11:25:07+02:00   e9bd1364a1be6247dfc7f6a2363e8843
 snippets/collection-tags.liquid:
   development: 2018-01-10T09:21:14+02:00   46029eea21893fe5add28a5547b3d35b
 snippets/comment.liquid:
@@ -142,7 +142,7 @@ snippets/onboarding-featured-blog.liquid:
 snippets/pagination-custom.liquid:
   development: 2018-01-10T09:21:14+02:00   13a718c4d2a26a6c5b0a4088feffcdee
 snippets/product-grid-item.liquid:
-  development: 2018-01-10T09:21:14+02:00   c6d04fa50c80dcfa75ba4570139eda64
+  development: 2018-01-16T09:51:26+02:00   c6d04fa50c80dcfa75ba4570139eda64
 snippets/related-products.liquid:
   development: 2018-01-10T09:21:14+02:00   f226f17d078871c7321c506d6f04b71f
 snippets/respond.liquid:
