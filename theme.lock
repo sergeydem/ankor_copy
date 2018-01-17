@@ -105,6 +105,8 @@ sections/rich-text.liquid:
   development: 2018-01-10T09:21:12+02:00   408f02185ca5329eb1a670cf19ea4089
 sections/slider.liquid:
   development: 2018-01-10T09:21:12+02:00   29838de632da1efa369434d77259fa22
+sections/wedo-brand.liquid:
+  development: 2018-01-17T09:52:26-05:00   32a2fcedaeb4da580c02502f580879c8
 snippets/bgset.liquid:
   development: 2018-01-10T09:21:14+02:00   85889bbc39b57621f32fad66317366fc
 snippets/blog-sidebar.liquid:
@@ -205,6 +207,8 @@ templates/page.liquid:
   development: 2018-01-10T09:21:15+02:00   920ebc6f5bbe5203ece5b8a6b1e66488
 templates/page.no-heading.liquid:
   development: 2018-01-10T09:21:15+02:00   1217ebf3d69892fe813368050dfa6629
+templates/page.wedo-brand.liquid:
+  development: 2018-01-17T08:29:20-05:00   3333e6ea20aae84fd3c7d94e0f581621
 templates/password.liquid:
   development: 2018-01-10T09:21:15+02:00   27c20529a5fa11780bc067f4f5c7cc9d
 templates/product.liquid:
