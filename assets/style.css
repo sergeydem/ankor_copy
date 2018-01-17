@@ -3,7 +3,7 @@ body a:hover, body a:focus, body a:active {
   text-decoration: none;
   outline: none; }
 
-body input, body textarea {
+body input, body textarea, body button {
   outline: none; }
 
 body input:active, body textarea:active {
@@ -35,7 +35,7 @@ body textarea {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     .site-header .wrapper .grid--full .grid__item {
       flex-direction: column; } }
   .site-header .wrapper .grid--full .grid__item nav {
@@ -57,7 +57,7 @@ body textarea {
           text-decoration: none; }
   .site-header .wrapper .grid--full .grid__item .site-header__logo {
     width: 70%; }
-    @media (max-width: 767.98px) {
+    @media (max-width: 991.98px) {
       .site-header .wrapper .grid--full .grid__item .site-header__logo .logo__image-wrapper {
         margin: 0 auto; } }
   .site-header .wrapper .grid--full .grid__item .wrap-tel {
@@ -88,7 +88,7 @@ body textarea {
     display: flex;
     justify-content: center;
     width: 100%; }
-    .site-header .wrapper .grid--full .grid__item .wrap-callback button {
+    .site-header .wrapper .grid--full .grid__item .wrap-callback .callback-btn {
       background-color: #1bbc9b;
       border: none;
       padding: 4px 10px;
@@ -257,7 +257,7 @@ body textarea {
     height: 1px;
     background: #909090; }
 
-button {
+.callback-btn {
   background-color: #1bbc9b;
   border: none;
   padding: 4px 10px;
@@ -350,3 +350,19 @@ button {
   color: #FFFFFF; }
 
 /*-------END FOOTER-------------*/
+/*--------------PopUP Callback------------------*/
+#modal-callback .modal-dialog .modal-content .modal-body #artCallback .form-group .input-group {
+  display: flex; }
+  #modal-callback .modal-dialog .modal-content .modal-body #artCallback .form-group .input-group input[type="text"] {
+    border: 1px solid #ccc; }
+
+#modal-callback .modal-dialog .modal-content .modal-body #artCallback .blockTitleModal .phone-in-callback .title, #modal-callback .modal-dialog .modal-content .modal-body #artCallback .blockTitleModal p {
+  margin: 0;
+  font-size: 14px; }
+  #modal-callback .modal-dialog .modal-content .modal-body #artCallback .blockTitleModal .phone-in-callback .title .phone, #modal-callback .modal-dialog .modal-content .modal-body #artCallback .blockTitleModal p .phone {
+    font-weight: bold; }
+
+#modal-callback .modal-dialog .modal-content .modal-header .modal-title {
+  font-size: 16px; }
+
+/*--------------END PopUP Callback------------------*/

@@ -41,7 +41,7 @@
     }
   {% endunless %}
 </style>
-
+<a href="{% section 'brand-template' %}">test</a>
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
   <div class="header-bar">
     <div class="wrapper medium-down--hide">
@@ -218,8 +218,70 @@
                     <p>+7(978)713-89-35</p>
                 </div>
             </div>
-            <div class="wrap-callback hidden-md-down">
-                <button>Обратный звонок</button>
+            <div class="wrap-callback">
+                <button type="button" class="callback-btn" data-toggle="modal" data-target="#modal-callback">Обратный звонок</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modal-callback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Заказ обратного звонка</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="artCallback" class="callback">
+                                    <div class="callback2">
+                                        <div class="blockTitleModal">
+                                            <div class="container">
+                                            <div class="row">
+                                                <div class="col-xs-12 phone-in-callback">
+                                                    <div class="title">Наши телефоны</div>
+                                                    <p><span class="phone">+7 (978) 025-44-78</span> - отдел продаж</p>
+                                                    <p><span class="phone">+7 (978) 713-89-35</span> - отдел продаж</p>
+                                                    <p><span class="phone">+7 (978) 063-41-80</span> - отдел конструкций</p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-horizontal formcallback">
+
+                                            <div class="form-group required">
+                                                <label class="control-label" for="input-firstname">Имя:</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="material-icons">&#xE7FD;</i></span>
+                                                    <input name="firstName" placeholder="Имя" class="form-control" type="text">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group required">
+                                                <label class="control-label" for="input-contact">Телефон:</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="material-icons">&#xE0CD;</i></span>
+                                                    <input id="telephone" name="phone" placeholder="Телефон" class="form-control" type="text">
+                                                </div>
+                                                <div class="aridiuscallback_errorcontact"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label" for="input-comment">Комментарий:</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="material-icons">&#xE150;</i></span>
+                                                    <textarea class="form-control" name="comment" placeholder="Комментарий"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-order_callback="on" data-loading-text="Загрузка..." class="btn btn-primary">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="wrap-search">
                 <!--

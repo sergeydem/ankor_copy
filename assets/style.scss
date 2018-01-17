@@ -9,7 +9,7 @@ body {
     outline: none;
   }
 
-  input, textarea {outline:none;}
+  input, textarea, button {outline:none;}
   input:active, textarea:active {outline:none;}
   :focus {outline:none;}
   textarea {resize:none;}
@@ -44,7 +44,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(md){
           flex-direction: column;
         }
 
@@ -76,7 +76,7 @@ body {
         .site-header__logo {
           width: 70%;
           .logo__image-wrapper {
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
               margin: 0 auto;
             }
           }
@@ -117,7 +117,7 @@ body {
           display: flex;
           justify-content: center;
           width: 100%;
-          button {
+          .callback-btn {
             background-color: #1bbc9b;
             border: none;
             padding: 4px 10px;
@@ -356,12 +356,13 @@ body {
   }
 }
 
-button {
+.callback-btn {
   background-color: #1bbc9b;
   border: none;
   padding: 4px 10px;
   border-radius: 20px;
   color: #FFFFFF;
+
 }
 /*--------------------END section team---------------------*/
 
@@ -496,3 +497,38 @@ button {
 }
 /*-------END FOOTER-------------*/
 
+
+/*--------------PopUP Callback------------------*/
+#modal-callback {
+  .modal-dialog {
+    .modal-content {
+      .modal-body {
+        #artCallback {
+          .form-group {
+            .input-group {
+              display: flex;
+              input[type="text"]{
+                border: 1px solid #ccc;
+              }
+            }
+          }
+          .blockTitleModal {
+            .phone-in-callback .title,p{
+              margin: 0;
+              font-size: 14px;
+              .phone {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      .modal-header {
+        .modal-title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+/*--------------END PopUP Callback------------------*/

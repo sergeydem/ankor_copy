@@ -240,14 +240,14 @@ gulp.task('styles', function(){
 
 
 gulp.task('shopifywatch', function() {
-    return watch('./+(assets|layout|config|snippets|templates|locales)/**')
-        .pipe(gulpShopify('c4b35b5425a548add32c8590f99bb2b2', '8e5b27d702d7c62a8bef852870ea1306', 'wedotest.myshopify.com', '25566674987'));
+    return watch('./+(assets|layout|config|snippets|templates|locales|sections)/**')
+        .pipe(gulpShopify('c4b35b5425a548add32c8590f99bb2b2', '8e5b27d702d7c62a8bef852870ea1306', 'wedotest.myshopify.com', '25689948203'));
 });
 
 //
 gulp.task('deploy', function() {
     return gulp.src('./+(assets|layout|config|snippets|templates|locales)/**')
-        .pipe(gulpShopify('c4b35b5425a548add32c8590f99bb2b2', '8e5b27d702d7c62a8bef852870ea1306', 'wedotest.myshopify.com', '25566674987'));
+        .pipe(gulpShopify('c4b35b5425a548add32c8590f99bb2b2', '8e5b27d702d7c62a8bef852870ea1306', 'wedotest.myshopify.com', '25689948203'));
 });
 
 
