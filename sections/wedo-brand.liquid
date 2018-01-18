@@ -6,80 +6,96 @@
     {% endif %}
 
     <div class="custom-content">
-        {% for block in section.blocks %}
-            {% case block.settings.width %}
-            {% when '25%' %}
-            <style>
-                .custom__item--{{block.id}} .custom__image {
-                    max-height: 250px;
-                }
-            </style>
-            {%- assign block_width = 'small--one-half medium-up--one-quarter' -%}
-            {%- assign image_size = '250x250' -%}
-            {% when '33%' %}
-            <style>
-                .custom__item--{{block.id}} .custom__image {
-                    max-height: 345px;
-                }
-            </style>
-            {%- assign block_width = 'small--one-half medium-up--one-third' -%}
-            {%- assign image_size = '345x345' -%}
-            {% when '50%' %}
-            <style>
-                .custom__item--{{block.id}} .custom__image {
-                    max-height: 530px;
-                }
-            </style>
-            {%- assign block_width = 'small--one-half medium-up--one-half' -%}
-            {%- assign image_size = '530x530' -%}
-            {% when '66%' %}
-            <style>
-                .custom__item--{{block.id}} .custom__image {
-                    max-height: 720px;
-                }
-            </style>
-            {%- assign block_width = 'medium-up--two-thirds' -%}
-            {%- assign image_size = '720x720' -%}
-            {% when '75%' %}
-            <style>
-                .custom__item--{{block.id}} .custom__image {
-                    max-height: 810px;
-                }
-            </style>
-            {%- assign block_width = 'medium-up--three-quarters' -%}
-            {%- assign image_size = '810x810' -%}
-            {% when '100%' %}
-            <style>
-                .custom__item--{{block.id}} .custom__image {
-                    max-height: 1090px;
-                }
-            </style>
-            {%- assign block_width = 'one-whole' -%}
-            {%- assign image_size = '1090x1090' -%}
-            {% endcase %}
-            <div class="custom__item custom__item--{{ block.id }} {{ block_width }} {% if block.settings.alignment %}align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
-                <div class="custom__item-inner custom__item-inner--{{ block.type }}">
+
+
+            <div class="container">
+                <div class="row">
+                    {% for block in section.blocks %}
+                        {% case block.settings.width %}
+                        {% when '25%' %}
+                        <style>
+                            .custom__item--{{block.id}} .custom__image {
+                                max-height: 250px;
+                            }
+                        </style>
+                        {%- assign block_width = 'small--one-half medium-up--one-quarter' -%}
+                        {%- assign image_size = '250x250' -%}
+                        {% when '33%' %}
+                        <style>
+                            .custom__item--{{block.id}} .custom__image {
+                                max-height: 345px;
+                            }
+                        </style>
+                        {%- assign block_width = 'small--one-half medium-up--one-third' -%}
+                        {%- assign image_size = '345x345' -%}
+                        {% when '50%' %}
+                        <style>
+                            .custom__item--{{block.id}} .custom__image {
+                                max-height: 530px;
+                            }
+                        </style>
+                        {%- assign block_width = 'small--one-half medium-up--one-half' -%}
+                        {%- assign image_size = '530x530' -%}
+                        {% when '66%' %}
+                        <style>
+                            .custom__item--{{block.id}} .custom__image {
+                                max-height: 720px;
+                            }
+                        </style>
+                        {%- assign block_width = 'medium-up--two-thirds' -%}
+                        {%- assign image_size = '720x720' -%}
+                        {% when '75%' %}
+                        <style>
+                            .custom__item--{{block.id}} .custom__image {
+                                max-height: 810px;
+                            }
+                        </style>
+                        {%- assign block_width = 'medium-up--three-quarters' -%}
+                        {%- assign image_size = '810x810' -%}
+                        {% when '100%' %}
+                        <style>
+                            .custom__item--{{block.id}} .custom__image {
+                                max-height: 1090px;
+                            }
+                        </style>
+                        {%- assign block_width = 'one-whole' -%}
+                        {%- assign image_size = '1090x1090' -%}
+                        {% endcase %}
                     {% case block.type %}
                     {% when 'image' %}
-                    {% if block.settings.image != blank %}
-                        {%- assign image_alt = block.settings.image.alt -%}
-                        {{ block.settings.image | img_url: image_size, scale: 2, crop: 'top' | img_tag: image_alt, 'custom__image' }}
-                    {% else %}
-                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-                    {% endif %}
+                    <div class="col-xs-12 col-sm-12 col-md-2 image-brand">
+                        <div class="custom__item custom__item--{{ block.id }} {{ block_width }} {% if block.settings.alignment %}align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
+                            <div class="custom__item-inner custom__item-inner--{{ block.type }}">
+                                {% if block.settings.image != blank %}
+                                    {%- assign image_alt = block.settings.image.alt -%}
+                                    {{ block.settings.image | img_url: image_size, scale: 2, crop: 'top' | img_tag: image_alt, 'custom__image' }}
+                                {% else %}
+                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
                     {% when 'text' %}
-                    <div class="medium-up--text-{{ block.settings.align_text }}">
-                        {% if block.settings.title != blank %}
-                            <h4 class="h3">{{ block.settings.title | escape }}</h4>
-                        {% endif %}
-                        {% if block.settings.text != blank %}
-                            <div class="rte-setting">{{ block.settings.text }}</div>
-                        {% endif %}
+                    <div class="col-xs-12 col-sm-12 col-md-10 text-brand">
+                        <div class="custom__item custom__item--{{ block.id }} {{ block_width }} {% if block.settings.alignment %}align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
+                            <div class="custom__item-inner custom__item-inner--{{ block.type }}">
+                                <div class="medium-up--text-{{ block.settings.align_text }}">
+                                    {% if block.settings.title != blank %}
+                                        <h4 class="h3">{{ block.settings.title | escape }}</h4>
+                                    {% endif %}
+                                    {% if block.settings.text != blank %}
+                                        <div class="rte-setting">{{ block.settings.text }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     {% endcase %}
+                    {% endfor %}
                 </div>
             </div>
-        {% endfor %}
+
+
     </div>
 </div>
 

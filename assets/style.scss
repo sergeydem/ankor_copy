@@ -532,3 +532,21 @@ body {
   }
 }
 /*--------------END PopUP Callback------------------*/
+
+
+/*--------------BRAND-------------------*/
+#shopify-section-wedo-brand {
+  .custom-content {
+    .image-brand {
+      .custom__item {
+        padding-left: 0;
+      }
+    }
+    .text-brand {
+      .align--bottom-middle {
+        text-align: left;
+      }
+    }
+  }
+}
+/*--------------END BRAND-------------------*/
